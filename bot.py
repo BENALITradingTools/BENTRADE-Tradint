@@ -226,7 +226,7 @@ PRODUCTS = {
                 #"1m": ("soon", "30$"), 
                 #"3m": ("soon", "80$"), 
                 #"6m": ("soon", "150$"), 
-                "life": ("https://www.mql5.com/en/market/product/160320", "62$")
+                "life": ("https://www.mql5.com/en/market/product/160320", "49$")
             },
             "💬 <b>Advanced Expert Advisor for Gold Trading.</b>\n• Designed for precise and safe gold trading\n• Smart entry system with risk control filters\n• Automatic money management system\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★★★",
             "💬 <b>إكسبيرت احترافي لتداول الذهب.</b>\n • دخول ذكي مع حماية متقدمة \n• إدارة تلقائية لرأس المال \n• مخصص لزوج XAUUSD \n\n⚙️ المنصة: MT5\n ⭐ التقييم: ★★★★★",
@@ -238,7 +238,7 @@ PRODUCTS = {
                 #"1m": ("soon", "30$"), 
                 #"3m": ("soon", "80$"), 
                 #"6m": ("soon", "150$"), 
-                "life": ("https://www.mql5.com/en/market/product/137973", "125$")
+                "life": ("https://www.mql5.com/en/market/product/137973", "99$")
             },
             "💬 <b>Powerful Expert Advisor for XAUUSD.</b>\n• Designed for gold trend trading\n• Smart entries with volatility filters\n• Automatic money management\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★★★",
             "💬 <b>اكسبيرت قوي لزوج الذهب XAUUSD.</b>\n• مصمم لتداول اتجاه الذهب (Trend)\n• نقاط دخول ذكية مع فلترة التذبذب\n• إدارة رأس مال تلقائية\n\n⚙️ المنصة: MT5\n⭐ التقييم: ★★★★★",
@@ -262,7 +262,7 @@ PRODUCTS = {
                 #"1m": ("soon", "35$"), 
                 #"3m": ("soon", "90$"), 
                 #"6m": ("soon", "160$"), 
-                "life": ("https://www.mql5.com/en/market/product/147302", "59$")
+                "life": ("https://www.mql5.com/en/market/product/147302", "99$")
             },
             "💬 <b>Professional Expert Advisor for accurate trade signals.</b>\n• Trend detection for high-probability entries\n• Adjustable settings: lot size, SL/TP, indicators\n• News Filter\n• Lightweight and fast interface\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★★★",
             "💬 <b>اكسبيرت احترافي لإشارات تداول دقيقة.</b>\n• كشف الاتجاه للدخول بفرص عالية الاحتمال\n• إعدادات مرنة: اللوت، الوقف/الهدف، والمؤشرات\n• فلتر للأخبار الاقتصادية\n• واجهة خفيفة وسريعة التنفيذ\n\n⚙️ المنصة: MT5\n⭐ التقييم: ★★★★★",
@@ -286,7 +286,7 @@ PRODUCTS = {
                 #"1m": ("soon", "20$"), 
                 #"3m": ("soon", "55$"), 
                 #"6m": ("soon", "100$"), 
-                "life": ("https://www.mql5.com/en/market/product/141569", "65$")
+                "life": ("https://www.mql5.com/en/market/product/141569", "149$")
             },
             "💬 <b>High-speed crypto trading EA.</b>\n• Works on BTC & crypto pairs\n• Smart trend detection\n• Low-latency execution\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★☆☆",
             "💬 <b>اكسبيرت عالي السرعة لتداول العملات الرقمية.</b>\n• يعمل على البيتكوين وأزواج الكريبتو\n• كشف ذكي للاتجاه (Trend)\n• تنفيذ فائق السرعة (Low-latency)\n\n⚙️ المنصة: MT5\n⭐ التقييم: ★★★☆☆",
@@ -336,7 +336,7 @@ PRODUCTS = {
                 #"1m": ("soon", "12$"), 
                 #"3m": ("soon", "30$"), 
                 #"6m": ("soon", "50$"), 
-                "life": ("https://www.mql5.com/en/market/product/144048", "49$")
+                "life": ("https://www.mql5.com/en/market/product/144048", "39$")
             },
             "⚡ <b>Fast-moving average crossover system.</b>\n• Trend reversals detection\n• MTF signals\n• Simple and effective\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★★☆",
             "⚡ <b>نظام تقاطع المتوسطات المتحركة السريع.</b>\n• كشف انعكاسات الاتجاه (Reversals)\n• إشارات متعددة الفريمات\n• بسيط وفعال جداً\n\n⚙️ المنصة: MT5\n⭐ التقييم: ★★★★☆",
@@ -347,7 +347,7 @@ PRODUCTS = {
         (
             "Smart EA Summary MT5©",
             {
-                "life": ("https://www.mql5.com/en/market/product/142115", "59$")
+                "life": ("https://www.mql5.com/en/market/product/142115", "49$")
             },
             "🖥️ <b>Monitor all your EAs in one panel.</b>\n• Tracks profit/loss by Magic Number\n• Real-time updates\n• Clean & modern interface\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★★★",
             "🖥️ <b>راقب جميع اكسبيرتاتك في لوحة واحدة.</b>\n• تتبع الربح/الخسارة لكل Magic Number\n• تحديث لحظي للبيانات\n• واجهة عصرية ونظيفة\n\n⚙️ المنصة: MT5\n⭐ التقييم: ★★★★★",
@@ -365,7 +365,7 @@ PRODUCTS = {
         (
             "Smart EA Summary MT4©",
             {
-                "life": ("https://www.mql5.com/en/market/product/142120", "59$")
+                "life": ("https://www.mql5.com/en/market/product/142120", "49$")
             },
             "📊 <b>EA summary panel for MT4 users.</b>\n• Magic-number grouping\n• Full EA monitoring\n• Clean & responsive UI\n\n⚙️ Platform: MT4\n⭐ Rating: ★★★★☆",
             "📊 <b>لوحة ملخص الاكسبيرتات لمستخدمي MT4.</b>\n• تجميع الصفقات حسب الـ Magic Number\n• مراقبة شاملة لأداء الروبوتات\n• واجهة مستخدم سلسة\n\n⚙️ المنصة: MT4\n⭐ التقييم: ★★★★☆",
