@@ -230,7 +230,7 @@ PRODUCTS = {
             },
         "💬 <b>Advanced Automated Trading System for MetaTrader 5.</b>\n• Multi-indicator strategy with momentum & volatility analysis\n• Built-in advanced risk management tools\n• Integrated economic news filter\n• Real-time monitoring panel\n• Designed for disciplined and stable automated trading\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★★★",
         "💬 <b>نظام تداول آلي متقدم لمنصة MetaTrader 5.</b>\n• استراتيجية متعددة المؤشرات تعتمد على الزخم والتذبذب\n• إدارة مخاطر متقدمة مدمجة\n• فلتر أخبار اقتصادية مدمج\n• لوحة مراقبة مباشرة أثناء التداول\n• مصمم لتداول آلي مستقر ومنظم\n\n⚙️ المنصة: MT5\n⭐ التقييم: ★★★★★",
-        "https://c.mql5.com/31/727/quantum-zentra-screen-9476.png"
+        "https://c.mql5.com/31/1895/quantum-zentra-screen-9915-preview.jpg"
         ),
         (
             "GOLDEN Guard Pro EA©",
