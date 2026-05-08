@@ -28,10 +28,10 @@ DEVELOPER_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=500/ht
 WELCOME_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
 SOCIAL_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
 
-PRODUCTS_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo3snsrt1u4j1u7s1j9ivae1ig8c.png"
+#PRODUCTS_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo3snsrt1u4j1u7s1j9ivae1ig8c.png"
 
-#PRODUCTS_IMAGE_AR = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo40r1h519cd7pavpp9p21ujkc.png"
-#PRODUCTS_IMAGE_EN = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo3snsrt1u4j1u7s1j9ivae1ig8c.png"
+PRODUCTS_IMAGE_AR = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo40r1h519cd7pavpp9p21ujkc.png"
+PRODUCTS_IMAGE_EN = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo3snsrt1u4j1u7s1j9ivae1ig8c.png"
 
 # --------------- LOGGING ---------------
 logging.basicConfig(
@@ -597,10 +597,15 @@ async def products_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     t = TEXTS[lang]
 
+    if lang == "ar":
+        image = PRODUCTS_IMAGE_AR
+    else:
+        image = PRODUCTS_IMAGE_EN
+    
     # إرسال قائمة الأقسام مباشرة
     await context.bot.send_photo(
         chat_id=chat_id,
-        photo=PRODUCTS_IMAGE_URL,
+        photo=image,
         caption=t["choose_cat"],
         reply_markup=products_menu(lang),
         parse_mode="HTML"
@@ -879,11 +884,16 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     await query.message.delete()
                 except Exception:
                     pass
-                    
+
+                if lang == "ar":
+                    image = PRODUCTS_IMAGE_AR
+                else:
+                    image = PRODUCTS_IMAGE_EN
+        
                 # Send a brand new text message with the product categories
                 await context.bot.send_photo(
                     chat_id,
-                    photo=PRODUCTS_IMAGE_URL,
+                    photo=image,
                     caption=t["choose_cat"],
                     reply_markup=products_menu(lang),
                     parse_mode="HTML"
