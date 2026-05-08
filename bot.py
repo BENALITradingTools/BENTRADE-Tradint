@@ -28,8 +28,6 @@ DEVELOPER_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=500/ht
 WELCOME_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
 SOCIAL_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
 
-PRODUCTS_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo3snsrt1u4j1u7s1j9ivae1ig8c.png"
-
 # --------------- LOGGING ---------------
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -595,9 +593,8 @@ async def products_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     t = TEXTS[lang]
     
     # إرسال قائمة الأقسام مباشرة
-    await context.bot.send_photo(
+    await context.bot.send_message(
         chat_id=chat_id,
-        photo=PRODUCTS_IMAGE_URL,
         text=t["choose_cat"],
         reply_markup=products_menu(lang),
         parse_mode="HTML"
