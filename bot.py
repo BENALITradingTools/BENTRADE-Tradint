@@ -595,9 +595,10 @@ async def products_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     t = TEXTS[lang]
     
     # إرسال قائمة الأقسام مباشرة
-    await context.bot.send_message(
+   await context.bot.send_photo(
         chat_id=chat_id,
-        text=t["choose_cat"],
+        photo=PRODUCTS_IMAGE_URL,
+        caption=t["choose_cat"],
         reply_markup=products_menu(lang),
         parse_mode="HTML"
     )
@@ -861,6 +862,12 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
             return
 
     if data_btn == 'products':
+        lang = get_user_lang(chat_id)
+        if not lang:
+            lang = 'en'
+    
+        t = TEXTS[lang]
+    
         try:
             await query.message.delete()
         except:
@@ -868,7 +875,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
         await context.bot.send_photo(
             chat_id=chat_id,
-            photo=PRODUCTS_IMAGE_URL,  # 👈 أضف صورة المنتجات هنا
+            photo=PRODUCTS_IMAGE_URL,
             caption=t["choose_cat"],
             reply_markup=products_menu(lang),
             parse_mode="HTML"
