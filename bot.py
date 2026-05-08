@@ -859,46 +859,22 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 )
             return
 
-    if data_btn == 'products':
-        lang = get_user_lang(chat_id)
-    
-        if not lang:
-            lang = 'en'
-            set_user_lang(chat_id, 'en')
-    
-        t = TEXTS[lang]
-    
-        try:
-            await query.message.delete()
-        except:
-            pass
-    
-        await context.bot.send_photo(
-            chat_id=chat_id,
-            photo=PRODUCTS_IMAGE_URL,
-            caption=t["choose_cat"],
-            reply_markup=products_menu(lang),
-            parse_mode="HTML"
-        )
-        return
-    
-            except BadRequest:
-                # If editing fails (e.g., trying to edit text into a photo caption 
-                # or vice-versa, or due to message type mismatch), we fall back 
-                # to deleting the existing message and sending a new text message.
-                try:
-                    await query.message.delete()
-                except Exception:
-                    pass
-                
-                # Send a brand new text message with the product categories
-                await context.bot.send_message(
-                    chat_id,
-                    text=t["choose_cat"],
-                    reply_markup=products_menu(lang),
-                    parse_mode="HTML"
-                )
-            return
+if data_btn == 'products':
+    try:
+        # نحذف الرسالة القديمة (سواء كانت نصية أو صورة سابقة) لتجنب التكرار
+        await query.message.delete()
+    except Exception:
+        pass
+
+    # نرسل رسالة جديدة تحتوي على الصورة
+    await context.bot.send_photo(
+        chat_id=chat_id,
+        photo=PRODUCTS_IMAGE_URL, 
+        caption=t["choose_cat"],
+        reply_markup=products_menu(lang),
+        parse_mode="HTML"
+    )
+    return
     
 # --- Social Media Section ---
     if data_btn == 'social_links':
