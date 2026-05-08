@@ -28,6 +28,8 @@ DEVELOPER_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=500/ht
 WELCOME_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
 SOCIAL_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
 
+PRODUCTS_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo3snsrt1u4j1u7s1j9ivae1ig8c.png"
+
 # --------------- LOGGING ---------------
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -859,12 +861,19 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
             return
 
     if data_btn == 'products':
-            # 📌 REFINEMENT: Ensure the message is edited as TEXT, not photo caption.
-            # This removes the image and replaces it with text and buttons.
-            try:
-                # Try to edit the current message (which could be a photo caption 
-                # or a simple text message) into a pure text message.
-                await query.edit_message_text(t["choose_cat"], reply_markup=products_menu(lang), parse_mode="HTML")
+        try:
+            await query.message.delete()
+        except:
+            pass
+    
+        await context.bot.send_photo(
+            chat_id=chat_id,
+            photo=PRODUCTS_IMAGE_URL,  # 👈 أضف صورة المنتجات هنا
+            caption=t["choose_cat"],
+            reply_markup=products_menu(lang),
+            parse_mode="HTML"
+        )
+        return
             except BadRequest:
                 # If editing fails (e.g., trying to edit text into a photo caption 
                 # or vice-versa, or due to message type mismatch), we fall back 
