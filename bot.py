@@ -28,7 +28,7 @@ DEVELOPER_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=500/ht
 WELCOME_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
 SOCIAL_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
 
-PRODUCTS_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo3snsrt1u4j1u7s1j9ivae1ig8c.png"
+PRODUCTS_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
 
 # --------------- LOGGING ---------------
 logging.basicConfig(
