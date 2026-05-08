@@ -585,14 +585,15 @@ async def products_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # إذا كان مستخدم جديد ولم يحدد اللغة بعد
     if not lang:
         await update.message.reply_text(
-            "Please choose your language first / يرجى اختيار اللغة أولاً:", 
+            "Please choose your language first / يرجى اختيار اللغة أولاً:",
             reply_markup=language_keyboard()
         )
         return
 
     t = TEXTS[lang]
-    
- PRODUCTS_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo3snsrt1u4j1u7s1j9ivae1ig8c.png"
+
+    # رابط صورة المنتجات
+    PRODUCTS_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo3snsrt1u4j1u7s1j9ivae1ig8c.png"
 
     # إرسال صورة مع أزرار الأقسام
     await context.bot.send_photo(
@@ -602,7 +603,6 @@ async def products_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=products_menu(lang),
         parse_mode="HTML"
     )
-
 async def dev_contact_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
     lang = get_user_lang(chat_id)
