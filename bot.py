@@ -22,11 +22,11 @@ BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 USERS_FILE = os.path.join(BASE_PATH, "users.json")
 
 # 📌 الصورة الترحيبية: تم استخدام الرابط الذي زودتنا به
-WELCOME_IMAGE_URL = "https://c.mql5.com/avatar/2026/5/69fba355-eb9d_big.jpg"
+WELCOME_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
 DEVELOPER_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=500/https://pe56d.s3.amazonaws.com/o_1jifq1pip1n7flb61sq41qgo75ql.jpg" # يمكنك تغيير الرابط لصورة المطور الخاصة
 # الروابط الجديدة للصور
-WELCOME_IMAGE_URL = "https://c.mql5.com/avatar/2026/5/69fba355-eb9d_big.jpg"
-SOCIAL_IMAGE_URL = "https://c.mql5.com/avatar/2026/5/69fba355-eb9d_big.jpg"
+WELCOME_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
+SOCIAL_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
 
 # --------------- LOGGING ---------------
 logging.basicConfig(
