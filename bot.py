@@ -584,15 +584,17 @@ async def products_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
     lang = get_user_lang(chat_id)
 
+    # إذا كان مستخدم جديد ولم يحدد اللغة بعد
     if not lang:
         await update.message.reply_text(
-            "Please choose your language first / يرجى اختيار اللغة أولاً:",
+            "Please choose your language first / يرجى اختيار اللغة أولاً:", 
             reply_markup=language_keyboard()
         )
         return
 
     t = TEXTS[lang]
-
+    
+    # إرسال قائمة الأقسام مباشرة
     await context.bot.send_photo(
         chat_id=chat_id,
         photo=PRODUCTS_IMAGE_URL,
@@ -600,7 +602,7 @@ async def products_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=products_menu(lang),
         parse_mode="HTML"
     )
-    
+
 async def dev_contact_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
     lang = get_user_lang(chat_id)
@@ -859,22 +861,31 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 )
             return
 
-if data_btn == 'products':
-    try:
-        # نحذف الرسالة القديمة (سواء كانت نصية أو صورة سابقة) لتجنب التكرار
-        await query.message.delete()
-    except Exception:
-        pass
-
-    # نرسل رسالة جديدة تحتوي على الصورة
-    await context.bot.send_photo(
-        chat_id=chat_id,
-        photo=PRODUCTS_IMAGE_URL, 
-        caption=t["choose_cat"],
-        reply_markup=products_menu(lang),
-        parse_mode="HTML"
-    )
-    return
+    if data_btn == 'products':
+            # 📌 REFINEMENT: Ensure the message is edited as TEXT, not photo caption.
+            # This removes the image and replaces it with text and buttons.
+            try:
+                # Try to edit the current message (which could be a photo caption 
+                # or a simple text message) into a pure text message.
+                await query.edit_message_text(t["choose_cat"], reply_markup=products_menu(lang), parse_mode="HTML")
+            except BadRequest:
+                # If editing fails (e.g., trying to edit text into a photo caption 
+                # or vice-versa, or due to message type mismatch), we fall back 
+                # to deleting the existing message and sending a new text message.
+                try:
+                    await query.message.delete()
+                except Exception:
+                    pass
+                
+                # Send a brand new text message with the product categories
+                await context.bot.send_photo(
+                    chat_id,
+                    photo=PRODUCTS_IMAGE_URL,
+                    caption=t["choose_cat"],
+                    reply_markup=products_menu(lang),
+                    parse_mode="HTML"
+                )
+            return
     
 # --- Social Media Section ---
     if data_btn == 'social_links':
