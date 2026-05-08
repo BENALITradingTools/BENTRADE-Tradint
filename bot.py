@@ -860,33 +860,33 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 )
             return
 
-if data_btn == 'products':
-        # 📌 التعديل: بدلاً من حذف الصورة، نقوم بتحديث الميديا (الصورة + النص)
-        try:
-            await query.edit_message_media(
-                media=InputMediaPhoto(
-                    media=PRODUCTS_IMAGE_URL, # الرابط الذي عرفته في الأعلى
-                    caption=t["choose_cat"],
-                    parse_mode="HTML"
-                ),
-                reply_markup=products_menu(lang)
-            )
-        except BadRequest:
-            # في حال حدث خطأ (مثلاً الرسالة الأصلية لم تكن تحتوي على صورة)
-            # نقوم بحذف الرسالة القديمة وإرسال رسالة جديدة تحتوي على الصورة
-            try:
-                await query.message.delete()
-            except Exception:
-                pass
-            
-            await context.bot.send_photo(
-                chat_id=chat_id,
-                photo=PRODUCTS_IMAGE_URL,
-                caption=t["choose_cat"],
-                reply_markup=products_menu(lang),
-                parse_mode="HTML"
-            )
-        return
+        if data_btn == 'products':
+                # 📌 التعديل: بدلاً من حذف الصورة، نقوم بتحديث الميديا (الصورة + النص)
+                try:
+                    await query.edit_message_media(
+                        media=InputMediaPhoto(
+                            media=PRODUCTS_IMAGE_URL, # الرابط الذي عرفته في الأعلى
+                            caption=t["choose_cat"],
+                            parse_mode="HTML"
+                        ),
+                        reply_markup=products_menu(lang)
+                    )
+                except BadRequest:
+                    # في حال حدث خطأ (مثلاً الرسالة الأصلية لم تكن تحتوي على صورة)
+                    # نقوم بحذف الرسالة القديمة وإرسال رسالة جديدة تحتوي على الصورة
+                    try:
+                        await query.message.delete()
+                    except Exception:
+                        pass
+                    
+                    await context.bot.send_photo(
+                        chat_id=chat_id,
+                        photo=PRODUCTS_IMAGE_URL,
+                        caption=t["choose_cat"],
+                        reply_markup=products_menu(lang),
+                        parse_mode="HTML"
+                    )
+                return
     
 # --- Social Media Section ---
     if data_btn == 'social_links':
