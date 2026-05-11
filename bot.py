@@ -28,8 +28,6 @@ DEVELOPER_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=500/ht
 WELCOME_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
 SOCIAL_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https://pe56d.s3.amazonaws.com/o_1jo3mbo0godd1r041b8phkvsfsc.jpg"
 
-#PRODUCTS_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo3snsrt1u4j1u7s1j9ivae1ig8c.png"
-
 PRODUCTS_IMAGE_AR = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo40r1h519cd7pavpp9p21ujkc.png"
 PRODUCTS_IMAGE_EN = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo3snsrt1u4j1u7s1j9ivae1ig8c.png"
 
@@ -56,8 +54,6 @@ CATEGORY_IMAGES = {
                 }
     }
 
-
-
 # --------------- LOGGING ---------------
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -82,11 +78,9 @@ TEXTS = {
         "back_btn": "🔙 Back",
         "buy_btn": "💵 Buy Now",
         "thank_you":"👋 Thanks for using BENTRADE Trading\n📈 Trade smart. Stay consistent. \nSee you again soon 🚀",
-        #"thank_you": "Thank you for using BENTRADE Trading 😊\nSee you again soon! 👋",
         "social_msg": "<b>Our Social Networks</b>\n\nStay updated with our latest news and offers through our official accounts:",
         "dev_msg": "<b>Direct Contact with Developer</b>\n\nYou can reach out for technical support or custom requests below:",
         "tools_msg": "<b>Why BENTRADE Trading ?</b>\n\n ✔ Market-Specific Trading Systems.\n\n ✔ Built for MT4, MT5 & TradingView.\n\n ✔ Developed with Real Market Data.\n\n ✔ One-Time Payment – No Monthly Fees.\n\n ✔ Lifetime License & Free Updates.\n\n✔ Designed for Precision, Not Over-Trading.",
-        #"info_msg": "ℹ️ <b>About This Bot</b>\n\nWelcome to BENALI Trading Tools Bot!\n\nHere you can:\n• Browse EAs and Indicators\n• Access free tools\n• Contact the developer\n\nThank you for using the bot 😊",
         "choose_cat": "\n\n",
         "choose_prod": "📦 Choose a Product: \n\n⤵",
         "click_buy": "\n\n🛒 <i>Start improving your Trading by Clicking tje botton below ✅.</i>",
@@ -107,13 +101,11 @@ TEXTS = {
         "buy_3m": "3 Months",
         "buy_6m": "6 Months",
         "buy_life": "",
-
         "prev_btn": "⬅️ Previous",
         "next_btn": "Next ➡️",
         "back_btn": "🔙 Back",
         "choose_lang": "Please choose your language first",
         "user_reviews": "User Reviews 📝",
-
         "why_benali": (
             "<b> Why BENTRADE Trading ?</b>\n\n"
             "✔ Market-Specific Trading Systems.\n\n"
@@ -123,16 +115,12 @@ TEXTS = {
             "✔ Lifetime License & Free Updates.\n\n"
             "✔ Designed for Precision, Not Over-Trading."
         ),
-
-
-
         "dev_msg": (
             "<b>👨‍💻 BENALI | Quant Developer</b>\n\n"
             "Expert in (MT4/MT5) development with a Master's in <b>Quantitative Economics</b>. "
             "I build tools that bridge statistical precision with practical market insights.\n\n"
             "📩 <b>Contact me for support or custom projects:</b>"
         ),
-
         "coming_soon": "Link coming soon! 🚧"
     },
     "ar": {
@@ -149,12 +137,10 @@ TEXTS = {
         "close_btn": "إغلاق",
         "back_btn": "🔙 رجوع",
         "buy_btn": "💵 شراء الآن",
-       # "thank_you": "شكراً لاستخدامك البوت 😊\nنراك قريباً! 👋",
         "thank_you": "👋 شكرًا لاستخدام BENTRADE للتداول\n📈تداول بذكاء. حافظ على الاستمرارية.\nنراك قريبًا مرة أخرى 🚀",
         "social_msg": "<b>منصاتنا على التواصل الاجتماعي</b>\n\nتابع آخر الأخبار والعروض عبر حساباتنا الرسمية:",
         "dev_msg": "<b>التواصل المباشر مع المطور</b>\n\nيمكنك التواصل للحصول على الدعم الفني أو الطلبات الخاصة عبر الوسائل أدناه:",
         "tools_msg": "<b>لماذا BENTRADE للتداول؟</b>\n\n✔ أنظمة تداول مخصصة لكل سوق.\n\n✔ متوافقة مع MT4 وMT5 وTradingView.\n\n✔ مطورة باستخدام بيانات السوق الحقيقية.\n\n✔ دفع مرة واحدة فقط – بدون رسوم شهرية.\n\n✔ ترخيص دائم وتحديثات مجانية.\n\n✔ مصممة للدقة، وليس للإفراط في التداول.",
-        #"info_msg": "ℹ️ <b>عن هذا البوت</b>\n\nمرحباً بك في بوت BENALI Trading Tools!\n\nهنا يمكنك:\n• تصفح الاكسبيرتات والمؤشرات\n• الوصول لأدوات مجانية\n• التواصل مع المطور\n\nشكراً لاستخدامك البوت 😊",
         "choose_cat": "\n\n",
         "choose_prod": "📦 اختر المنتج: \n\n⤵",
         "click_buy": "\n\n🛒 <i>ابدا تحسين تداولك بالضغط على الزر أدناه ✅.</i>",
@@ -175,13 +161,11 @@ TEXTS = {
         "buy_3m": " 3 أشهر",
         "buy_6m": " 6 أشهر",
         "buy_life": "",
-
         "prev_btn": "⬅️ السابق",
         "next_btn": "التالي ➡️",
         "back_btn": "🔙 العودة",
         "choose_lang": "يرجى اختيار اللغة أولاً",
         "user_reviews": "تقييمات المستخدمين 📝",
-
         "why_benali": (
             "<b>لماذا BENTRADE للتداول؟</b>\n\n"
             "✔ أنظمة تداول مخصصة لكل سوق.\n\n"
@@ -191,8 +175,6 @@ TEXTS = {
             "✔ ترخيص دائم وتحديثات مجانية.\n\n"
             "✔ مصممة للدقة، وليس للإفراط في التداول."
         ),
-
-
         "dev_msg": (
             "<b>👨‍💻 BENALI  | مطور كمي </b>\n\n"
             "خبير في تطوير أدوات (MT4/MT5) بخلفية أكاديمية في <b>الاقتصاد الكمي</b>. "
@@ -998,18 +980,6 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
     
         return
-
-    
-  #  if data_btn in PRODUCTS.keys():
-        # نحذف الرسالة الحالية (الصورة أو النص المحرر) ونرسل رسالة نصية جديدة لقائمة المنتجات
-    #    try:
-      #      await query.message.delete()
-      #  except Exception:
-       #     pass # Ignore if delete fails
-            
-    #    context.user_data["last_category"] = data_btn
-    #    await context.bot.send_message(chat_id, t["choose_prod"], reply_markup=generate_product_list(data_btn, lang))
-   #     return
 
     # Product Selection (already sends a photo, which is fine)
     if data_btn.startswith("prd__"):
