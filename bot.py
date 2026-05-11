@@ -940,23 +940,23 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # صور الأقسام
         CATEGORY_IMAGES = {
             "ea_list": {
-                "ar": "رابط_صورة_الروبوتات_العربية",
-                "en": "رابط_صورة_الروبوتات_الانجليزية"
+                "ar": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc0tar19sljd1623p95hi1f.jpg",
+                "en": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc5hso10q01a881sa3m4q3kg1l.jpg"
                         },
         
             "ind_list": {
-                "ar": "رابط_صورة_المؤشرات_العربية",
-                "en": "رابط_صورة_المؤشرات_الانجليزية"
+                "ar": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc0tar1mp51b5619jt1gdlo3jg.jpg",
+                "en": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc5hso1j6l1mki1ho61d5s9o31m.jpg"
                         },
             
             "tools_list": {
-                "ar": "رابط_صورة_الادوات_العربية",
-                "en": "رابط_صورة_الادوات_الانجليزية"
+                "ar": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc0tarna1t7m1ouhhkd1lpnh.jpg",
+                "en": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc5hso134akft13br19gq5bo1j.jpg"
                         },
         
             "free_list": {
-                "ar": "رابط_صورة_المجانيات_العربية",
-                "en": "رابط_صورة_المجانيات_الانجليزية"
+                "ar": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc0tar1dqtuffd2scakfqi.jpg",
+                "en": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc5hso1ds7n0stgi1i082ir1k.jpg"
                         }
             }
 
