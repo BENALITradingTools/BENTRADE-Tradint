@@ -937,16 +937,61 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
 
+    # صور الأقسام
+        CATEGORY_IMAGES = {
+            "ea_list": {
+                "ar": "رابط_صورة_الروبوتات_العربية",
+                "en": "رابط_صورة_الروبوتات_الانجليزية"
+                        },
+        
+            "ind_list": {
+                "ar": "رابط_صورة_المؤشرات_العربية",
+                "en": "رابط_صورة_المؤشرات_الانجليزية"
+                        },
+            
+            "tools_list": {
+                "ar": "رابط_صورة_الادوات_العربية",
+                "en": "رابط_صورة_الادوات_الانجليزية"
+                        },
+        
+            "free_list": {
+                "ar": "رابط_صورة_المجانيات_العربية",
+                "en": "رابط_صورة_المجانيات_الانجليزية"
+                        }
+            }
+
     if data_btn in PRODUCTS.keys():
-        # نحذف الرسالة الحالية (الصورة أو النص المحرر) ونرسل رسالة نصية جديدة لقائمة المنتجات
+
         try:
             await query.message.delete()
         except Exception:
-            pass # Ignore if delete fails
-            
+            pass
+    
         context.user_data["last_category"] = data_btn
-        await context.bot.send_message(chat_id, t["choose_prod"], reply_markup=generate_product_list(data_btn, lang))
+    
+        # اختيار الصورة حسب اللغة والقسم
+        image = CATEGORY_IMAGES[data_btn][lang]
+    
+        await context.bot.send_photo(
+            chat_id=chat_id,
+            photo=image,
+            caption=t["choose_prod"],
+            reply_markup=generate_product_list(data_btn, lang),
+            parse_mode="HTML"
+        )
+    
         return
+    
+  #  if data_btn in PRODUCTS.keys():
+        # نحذف الرسالة الحالية (الصورة أو النص المحرر) ونرسل رسالة نصية جديدة لقائمة المنتجات
+    #    try:
+      #      await query.message.delete()
+      #  except Exception:
+       #     pass # Ignore if delete fails
+            
+    #    context.user_data["last_category"] = data_btn
+    #    await context.bot.send_message(chat_id, t["choose_prod"], reply_markup=generate_product_list(data_btn, lang))
+   #     return
 
     # Product Selection (already sends a photo, which is fine)
     if data_btn.startswith("prd__"):
