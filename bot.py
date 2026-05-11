@@ -960,18 +960,22 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                         }
             }
 
+
     if data_btn in PRODUCTS.keys():
 
-        try:
-            await query.message.delete()
-        except Exception:
-            pass
-    
-        context.user_data["last_category"] = data_btn
-    
-        # اختيار الصورة حسب اللغة والقسم
+    context.user_data["last_category"] = data_btn
+
+    try:
         image = CATEGORY_IMAGES[data_btn][lang]
-    
+    except:
+        image = PRODUCTS_IMAGE_EN
+
+    try:
+        await query.message.delete()
+    except:
+        pass
+
+    try:
         await context.bot.send_photo(
             chat_id=chat_id,
             photo=image,
@@ -979,8 +983,20 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
             reply_markup=generate_product_list(data_btn, lang),
             parse_mode="HTML"
         )
-    
-        return
+    except Exception as e:
+
+        # fallback إذا فشلت الصورة
+        logger.error(f"Category image error: {e}")
+
+        await context.bot.send_message(
+            chat_id=chat_id,
+            text=t["choose_prod"],
+            reply_markup=generate_product_list(data_btn, lang),
+            parse_mode="HTML"
+        )
+
+    return
+
     
   #  if data_btn in PRODUCTS.keys():
         # نحذف الرسالة الحالية (الصورة أو النص المحرر) ونرسل رسالة نصية جديدة لقائمة المنتجات
