@@ -33,6 +33,31 @@ SOCIAL_IMAGE_URL = "https://payhip.com/cdn-cgi/image/format=auto,width=750/https
 PRODUCTS_IMAGE_AR = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo40r1h519cd7pavpp9p21ujkc.png"
 PRODUCTS_IMAGE_EN = "https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1jo3snsrt1u4j1u7s1j9ivae1ig8c.png"
 
+    # صور الأقسام
+CATEGORY_IMAGES = {
+    "ea_list": {
+        "ar": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc0tar19sljd1623p95hi1f.jpg",
+        "en": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc5hso10q01a881sa3m4q3kg1l.jpg"
+                },
+
+    "ind_list": {
+        "ar": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc0tar1mp51b5619jt1gdlo3jg.jpg",
+        "en": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc5hso1j6l1mki1ho61d5s9o31m.jpg"
+                },
+    
+    "tools_list": {
+        "ar": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc0tarna1t7m1ouhhkd1lpnh.jpg",
+        "en": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc5hso134akft13br19gq5bo1j.jpg"
+                },
+
+    "free_list": {
+        "ar": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc0tar1dqtuffd2scakfqi.jpg",
+        "en": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc5hso1ds7n0stgi1i082ir1k.jpg"
+                }
+    }
+
+
+
 # --------------- LOGGING ---------------
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -937,65 +962,42 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
 
-    # صور الأقسام
-        CATEGORY_IMAGES = {
-            "ea_list": {
-                "ar": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc0tar19sljd1623p95hi1f.jpg",
-                "en": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc5hso10q01a881sa3m4q3kg1l.jpg"
-                        },
-        
-            "ind_list": {
-                "ar": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc0tar1mp51b5619jt1gdlo3jg.jpg",
-                "en": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc5hso1j6l1mki1ho61d5s9o31m.jpg"
-                        },
-            
-            "tools_list": {
-                "ar": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc0tarna1t7m1ouhhkd1lpnh.jpg",
-                "en": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc5hso134akft13br19gq5bo1j.jpg"
-                        },
-        
-            "free_list": {
-                "ar": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc0tar1dqtuffd2scakfqi.jpg",
-                "en": "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jocc5hso1ds7n0stgi1i082ir1k.jpg"
-                        }
-            }
-
 
     if data_btn in PRODUCTS.keys():
 
-    context.user_data["last_category"] = data_btn
-
-    try:
-        image = CATEGORY_IMAGES[data_btn][lang]
-    except:
-        image = PRODUCTS_IMAGE_EN
-
-    try:
-        await query.message.delete()
-    except:
-        pass
-
-    try:
-        await context.bot.send_photo(
-            chat_id=chat_id,
-            photo=image,
-            caption=t["choose_prod"],
-            reply_markup=generate_product_list(data_btn, lang),
-            parse_mode="HTML"
-        )
-    except Exception as e:
-
-        # fallback إذا فشلت الصورة
-        logger.error(f"Category image error: {e}")
-
-        await context.bot.send_message(
-            chat_id=chat_id,
-            text=t["choose_prod"],
-            reply_markup=generate_product_list(data_btn, lang),
-            parse_mode="HTML"
-        )
-
-    return
+        context.user_data["last_category"] = data_btn
+    
+        try:
+            image = CATEGORY_IMAGES[data_btn][lang]
+        except:
+            image = PRODUCTS_IMAGE_EN
+    
+        try:
+            await query.message.delete()
+        except:
+            pass
+    
+        try:
+            await context.bot.send_photo(
+                chat_id=chat_id,
+                photo=image,
+                caption=t["choose_prod"],
+                reply_markup=generate_product_list(data_btn, lang),
+                parse_mode="HTML"
+            )
+        except Exception as e:
+    
+            # fallback إذا فشلت الصورة
+            logger.error(f"Category image error: {e}")
+    
+            await context.bot.send_message(
+                chat_id=chat_id,
+                text=t["choose_prod"],
+                reply_markup=generate_product_list(data_btn, lang),
+                parse_mode="HTML"
+            )
+    
+        return
 
     
   #  if data_btn in PRODUCTS.keys():
