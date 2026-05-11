@@ -1045,17 +1045,43 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                         await query.edit_message_text(caption, parse_mode="HTML", reply_markup=kb)
                     return
 
+
     if data_btn == "back_products_section":
-        # العودة من تفاصيل المنتج (صورة) إلى قائمة المنتجات (رسالة نصية)
+
         last = context.user_data.get("last_category", "ea_list")
-        # نحذف الرسالة الحالية (الصورة) ونرسل قائمة المنتجات كرسالة نصية جديدة
+    
         try:
             await query.message.delete()
         except Exception:
             pass
-            
-        await context.bot.send_message(chat_id, t["choose_prod"], reply_markup=generate_product_list(last, lang))
+    
+        # اختيار صورة القسم حسب اللغة
+        try:
+            image = CATEGORY_IMAGES[last][lang]
+        except:
+            image = PRODUCTS_IMAGE_EN
+    
+        await context.bot.send_photo(
+            chat_id=chat_id,
+            photo=image,
+            caption=t["choose_prod"],
+            reply_markup=generate_product_list(last, lang),
+            parse_mode="HTML"
+        )
+    
         return
+
+#    if data_btn == "back_products_section":
+        # العودة من تفاصيل المنتج (صورة) إلى قائمة المنتجات (رسالة نصية)
+  #      last = context.user_data.get("last_category", "ea_list")
+        # نحذف الرسالة الحالية (الصورة) ونرسل قائمة المنتجات كرسالة نصية جديدة
+   #     try:
+     #       await query.message.delete()
+      #  except Exception:
+         #   pass
+            
+     #   await context.bot.send_message(chat_id, t["choose_prod"], reply_markup=generate_product_list(last, lang))
+    #    return
 
     if data_btn == 'contact':
         contact_keyboard = InlineKeyboardMarkup([
