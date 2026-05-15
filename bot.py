@@ -256,7 +256,7 @@ PRODUCTS = {
             },
             "💬 <b>Advanced Expert Advisor for Gold Trading.</b>\n• Designed for precise and safe gold trading\n• Smart entry system with risk control filters\n• Automatic money management system\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★★★",
             "💬 <b>إكسبيرت احترافي لتداول الذهب.</b>\n • دخول ذكي مع حماية متقدمة \n• إدارة تلقائية لرأس المال \n• مخصص لزوج XAUUSD \n\n⚙️ المنصة: MT5\n ⭐ التقييم: ★★★★★",
-            "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jermgvk74g813v7p14iobk1h15.png"
+            "https://c.mql5.com/31/1898/golden-guard-pro-ea-screen-5893-preview.jpg"
         ),
         (
             "GOLDEN ALGO MT5©",
