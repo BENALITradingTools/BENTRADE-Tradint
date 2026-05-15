@@ -280,7 +280,7 @@ PRODUCTS = {
             },
             "💬 <b>Simple and reliable EA for daily gold signals.</b>\n• No martingale / no grid\n• Easy to use for beginners\n• Low-risk entries\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★★★",
             "💬 <b>اكسبيرت بسيط وموثوق لإشارات الذهب اليومية.</b>\n• خالٍ من المضاعفات (Martingale) والشبكات (Grid)\n• سهل الاستخدام للمبتدئين\n• صفقات منخفضة المخاطرة\n\n⚙️ المنصة: MT5\n⭐ التقييم: ★★★★★",
-            "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1je0buut218jhrvabo37r4123215.png"
+            "https://c.mql5.com/31/1712/gold-strike-ea-screen-2627-preview.jpg"
         ),
         (
             "Prime Trader EA©",
@@ -292,7 +292,7 @@ PRODUCTS = {
             },
             "💬 <b>Professional Expert Advisor for accurate trade signals.</b>\n• Trend detection for high-probability entries\n• Adjustable settings: lot size, SL/TP, indicators\n• News Filter\n• Lightweight and fast interface\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★★★",
             "💬 <b>اكسبيرت احترافي لإشارات تداول دقيقة.</b>\n• كشف الاتجاه للدخول بفرص عالية الاحتمال\n• إعدادات مرنة: اللوت، الوقف/الهدف، والمؤشرات\n• فلتر للأخبار الاقتصادية\n• واجهة خفيفة وسريعة التنفيذ\n\n⚙️ المنصة: MT5\n⭐ التقييم: ★★★★★",
-            "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1jdtt0e6qctc1jha12tl1t5r1fas15.png"
+            "https://c.mql5.com/31/1711/prime-trader-screen-1277-preview.jpg"
         ),
         (
             "FOREX Strike EA©",
@@ -304,7 +304,7 @@ PRODUCTS = {
             },
             "💬 <b>Reliable EA for major forex pairs.</b>\n• Stable performance\n• No martingale / no grid\n• Designed for long-term consistency\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★★☆",
             "💬 <b>اكسبيرت موثوق لأزواج الفوركس الرئيسية.</b>\n• أداء مستقر وثابت\n• لا يستخدم المضاعفات أو الشبكات\n• مصمم لتحقيق الاستمرارية على المدى الطويل\n\n⚙️ المنصة: MT5\n⭐ التقييم: ★★★★☆",
-            "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1j54oivp31ofi168117le1autk4m10.png"
+            "https://c.mql5.com/31/1758/forex-strike-ea-screen-8183-preview.jpg"
         ),
         (
             "BitRocket EA MT5©",
@@ -316,7 +316,7 @@ PRODUCTS = {
             },
             "💬 <b>High-speed crypto trading EA.</b>\n• Works on BTC & crypto pairs\n• Smart trend detection\n• Low-latency execution\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★☆☆",
             "💬 <b>اكسبيرت عالي السرعة لتداول العملات الرقمية.</b>\n• يعمل على البيتكوين وأزواج الكريبتو\n• كشف ذكي للاتجاه (Trend)\n• تنفيذ فائق السرعة (Low-latency)\n\n⚙️ المنصة: MT5\n⭐ التقييم: ★★★☆☆",
-            "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1j2vkdrbf2ol7v8kn359hs4f10.png"
+            "https://c.mql5.com/31/1893/bitrocket-ea-screen-9023-preview.jpg"
         ),
     ],
     "ind_list": [
