@@ -366,7 +366,7 @@ PRODUCTS = {
             },
             "⚡ <b>Fast-moving average crossover system.</b>\n• Trend reversals detection\n• MTF signals\n• Simple and effective\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★★☆",
             "⚡ <b>نظام تقاطع المتوسطات المتحركة السريع.</b>\n• كشف انعكاسات الاتجاه (Reversals)\n• إشارات متعددة الفريمات\n• بسيط وفعال جداً\n\n⚙️ المنصة: MT5\n⭐ التقييم: ★★★★☆",
-            "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1j2o3l6vu1tql1j4vefg4ai1db0r.png"
+            "https://c.mql5.com/31/1659/crossmaster-pro-screen-1175-preview.jpg"
         ),
     ],
     "tools_list": [
@@ -377,7 +377,7 @@ PRODUCTS = {
             },
             "🖥️ <b>Monitor all your EAs in one panel.</b>\n• Tracks profit/loss by Magic Number\n• Real-time updates\n• Clean & modern interface\n\n⚙️ Platform: MT5\n⭐ Rating: ★★★★★",
             "🖥️ <b>راقب جميع اكسبيرتاتك في لوحة واحدة.</b>\n• تتبع الربح/الخسارة لكل Magic Number\n• تحديث لحظي للبيانات\n• واجهة عصرية ونظيفة\n\n⚙️ المنصة: MT5\n⭐ التقييم: ★★★★★",
-            "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1j2up103r1a95i8962d1lqk1rvr.png"
+            "https://c.mql5.com/31/1743/smart-ea-summary-screen-8132-preview.jpg"
         ),
         (
             "Smart Risk Manager©",
@@ -395,7 +395,7 @@ PRODUCTS = {
             },
             "📊 <b>EA summary panel for MT4 users.</b>\n• Magic-number grouping\n• Full EA monitoring\n• Clean & responsive UI\n\n⚙️ Platform: MT4\n⭐ Rating: ★★★★☆",
             "📊 <b>لوحة ملخص الاكسبيرتات لمستخدمي MT4.</b>\n• تجميع الصفقات حسب الـ Magic Number\n• مراقبة شاملة لأداء الروبوتات\n• واجهة مستخدم سلسة\n\n⚙️ المنصة: MT4\n⭐ التقييم: ★★★★☆",
-            "https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1j2up103r1a95i8962d1lqk1rvr.png"
+            "https://c.mql5.com/31/1743/smart-ea-summary-screen-8132-preview.jpg"
         ),
     ],
  #   "tv_list": [
